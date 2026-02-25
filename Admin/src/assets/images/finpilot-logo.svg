@@ -1,0 +1,9 @@
+<svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Mark - Abstract "FP" with upward arrow -->
+  <path d="M15 35V15H5v20h10zm-5-25V5h10v20l5 5v5H15l-5-5V10z" fill="#2563EB"/>
+  <path d="M30 15l15 20h-10L25 20v15h-5V5h10v20l10-15h-5l5 5z" fill="#2563EB"/>
+  
+  <!-- FinPilot Text -->
+  <text x="60" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="700" fill="#1E293B">FinPilot</text>
+  <text x="60" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#64748B">Financial Dashboard</text>
+</svg>

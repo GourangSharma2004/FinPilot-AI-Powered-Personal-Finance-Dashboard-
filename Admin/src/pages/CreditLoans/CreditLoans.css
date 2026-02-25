@@ -1,0 +1,221 @@
+/* Credit Card Styling */
+.credit-card {
+    position: relative;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.credit-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+.credit-card .card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Card Hover Effect */
+.credit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
+}
+
+/* Card Back Design */
+.credit-card-back {
+    position: relative;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display: none;
+}
+
+/* Card Flip Effect */
+.credit-card-wrapper {
+    perspective: 1000px;
+}
+
+.credit-card-wrapper.flipped .credit-card {
+    transform: rotateY(180deg);
+}
+
+.credit-card-wrapper.flipped .credit-card-back {
+    display: block;
+    transform: rotateY(0);
+}
+
+/* Card Brand Icons */
+.card-brand {
+    width: 60px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Card Chip */
+.card-chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #ddb35f, #e9d78e);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-chip:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Card Number */
+.card-number {
+    letter-spacing: 1.5px;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+/* Card Holder & Expiry */
+.card-details {
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Card Status Badge */
+.card-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* Card Back Strip */
+.card-strip {
+    height: 40px;
+    background: #333;
+    margin: 20px -20px;
+    position: relative;
+}
+
+/* Card CVV Strip */
+.cvv-strip {
+    background: white;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* Card Hologram */
+.card-hologram {
+    width: 50px;
+    height: 30px;
+    background: linear-gradient(45deg, #00b4db, #0083b0);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-hologram:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.5), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Card Contactless Symbol */
+.contactless-symbol {
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 8px;
+}
+
+.contactless-symbol:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .credit-card {
+        margin-bottom: 20px;
+    }
+    
+    .card-brand {
+        width: 50px;
+        height: 35px;
+    }
+    
+    .card-chip {
+        width: 35px;
+        height: 25px;
+    }
+}
+
+/* Card Flip Button */
+.flip-card-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.flip-card-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: rotate(180deg);
+}
