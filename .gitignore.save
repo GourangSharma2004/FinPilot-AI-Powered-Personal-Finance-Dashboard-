@@ -1,0 +1,19 @@
+node_modules/
+build/
+dist/
+.env
+.env.*
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+node_modules/
+build/
+dist/
+.env
+.env.*
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+git add .
+git commit -m "Initial commit for FinPilot frontend"
+
